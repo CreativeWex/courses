@@ -51,3 +51,30 @@ public class DemoApplication {
     }
 }
 ```
+
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+```
+
+```sql
+INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
+INSERT INTO users (name, email) VALUES ('Bob', 'bob@example.com');
+INSERT INTO users (name, email) VALUES ('Charlie', 'charlie@example.com');
+INSERT INTO users (name, email) VALUES ('Diana', 'diana@example.com');
+INSERT INTO users (name, email) VALUES ('Eve', 'eve@example.com');
+```
+
+```
+spring.application.name=demo
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.platform=h2
+spring.h2.console.enabled=true
+```
